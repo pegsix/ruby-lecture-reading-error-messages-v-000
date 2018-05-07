@@ -1,4 +1,3 @@
-require 'pry'
 describe "Not having any errors and being all green" do
 
   context 'NameError' do
@@ -6,11 +5,6 @@ describe "Not having any errors and being all green" do
       expect{
         load './lib/a_name_error.rb'
       }.to_not raise_error
-      binding.pry
-      expect {
-        require_relative('../lib/a_name_error')
-        puts greeting}.to_not raise_error
-    end
   end
 
   context 'SyntaxError' do
